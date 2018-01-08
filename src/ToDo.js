@@ -22,6 +22,7 @@ class ToDo extends Component {
     // dont add if its a empty todo.
     if(el.value !== '') {
       // if we dont use the setState method, react wont trigger re-render and it is better to update the state using setState() method.
+      //this.setState(this.state.todos.slice(0, index));
       this.setState((prevState) => {
         prevState.todos.push({
           id: (new Date()).toJSON(),
