@@ -28,12 +28,11 @@ class ToDo extends Component {
           id: (new Date()).toJSON(),
           value: el.value
         });
+        el.value = '';
         return {
           todos : prevState.todos
         }
       });
-      // if not in settimeout, it executes before setState, and empty string gets added to todo
-      setTimeout(() => el.value = '', 0);
     }
   }
 
